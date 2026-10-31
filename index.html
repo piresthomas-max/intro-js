@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Introdução ao JavaScript </title>
     <style>
-        body{
+        body {
             background-color: black;
             color: bisque;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
-        header{
+        header {
             text-align: center;
         }
 
-        main{
+        main {
             padding: 2rem;
         }
 
         section,
-        header, 
-        article{
+        header,
+        article {
             border-radius: 2rem;
             background-color: #25262d;
             padding: 2rem;
@@ -30,7 +30,7 @@
             border: .0625rem solid #ffffff23;
         }
 
-        button{
+        button {
             height: 3rem;
             border-radius: 2rem;
             border: none;
@@ -56,7 +56,8 @@
     <main>
         <section>
             <h2> O que é o JavaScript? </h2>
-            <p> É uma linguagem de programação de alto nível e dinâmica, muito utilizado para criar aplicações interativas e sistemas de software. </p>
+            <p> É uma linguagem de programação de alto nível e dinâmica, muito utilizado para criar aplicações
+                interativas e sistemas de software. </p>
 
             <p> No desenvolvimento web, trabalha especificamente com duas outras linguagens: </p>
 
@@ -86,11 +87,11 @@
 
             <h3 class="titulo-h3"> BackEnd </h3>
             <ul>
-               <li> Criar API's </li>
-               <li> Autemticações </li>
-               <li> Integração com serviços </li>
-               <li> Processamento de requisições </li>
-               <li> Integração com bancos de dados </li>
+                <li> Criar API's </li>
+                <li> Autemticações </li>
+                <li> Integração com serviços </li>
+                <li> Processamento de requisições </li>
+                <li> Integração com bancos de dados </li>
             </ul>
 
             <h3 class="titulo-h3"> Aplicações Mobile/Desktop </h3>
@@ -100,7 +101,9 @@
                 <li> Geralmente, utilizamos React Native ou Electron </li>
             </ul>
 
-            <p> <strong> Lembrete: </strong> A linguagem não fornece todos esses elementos sozinha. As possibilidades citadas acima, dependem também do ambiente de execução, de API's, bibliotecas e frameworks utilizados. </p>
+            <p> <strong> Lembrete: </strong> A linguagem não fornece todos esses elementos sozinha. As possibilidades
+                citadas acima, dependem também do ambiente de execução, de API's, bibliotecas e frameworks utilizados.
+            </p>
         </section>
 
         <section>
@@ -111,43 +114,50 @@
                 <li> Interno </li>
                 <li> Externo </li>
             </ul>
-<article>
-            <h3> JavaScript Inline </h3>
-            <p> Nessa abordagem, o JavaScript é escrito diretamente no atributo de um elemento HTML. Exemplo: </p>
+            <article>
+                <h3> JavaScript Inline </h3>
+                <p> Nessa abordagem, o JavaScript é escrito diretamente no atributo de um elemento HTML. Exemplo: </p>
 
-            <button type="button" onclick="alert('Olá, mundo')"> Clique aqui para mostrar a mensagem </button>
-</article>
+                <button type="button" onclick="alert('Olá, mundo')"> Clique aqui para mostrar a mensagem </button>
+            </article>
 
-<article>
-            <h3> JavaScript Interno </h3>
-            <p> Nessa abordagem o JavaScript é escrito dentro da tag <code> &lt;script&gt; </code>, no próprio HTML. Exemplo: </p>
+            <article>
+                <h3> JavaScript Interno </h3>
+                <p> Nessa abordagem o JavaScript é escrito dentro da tag <code> &lt;script&gt; </code>, no próprio HTML.
+                    Exemplo: </p>
 
-            <button type="button" id="botao"> Trocar cor de fundo do site </button>
-</article>
+                <button type="button" id="botao"> Trocar cor de fundo do site </button>
+            </article>
 
-<article>
-    <h3> JavaScript Externo </h3>
-    <p> Nessa abordagem, o JavaScript é escrito em um arquivo separado, utilizando a extensão .js, sendo configurado no atributo src da tag de <code>&ltscript&gt;</code>. Exemplo: </p>
-</article>
+            <article>
+                <h3> JavaScript Externo </h3>
+                <p> Nessa abordagem, o JavaScript é escrito em um arquivo separado, utilizando a extensão .js, sendo
+                    configurado no atributo src da tag de <code>&ltscript&gt;</code>. Exemplo: </p>
+            </article>
         </section>
-     </main>
+    </main>
 
-     <!-- Aplicando o JavaScript Interno -->
-     <script>
+    <!-- Aplicando o JavaScript Interno -->
+    <script>
         const botao = document.querySelector("#botao")
 
-        botao.addEventListener("click", function() {
+        botao.addEventListener("click", function () {
             document.body.style.backgroundColor = "#36285c"
         })
-     </script>
+    </script>
 
-     <!-- Aplicando JavaScript Externo -->
-     <!-- <script src="ola-mundo.js"></script> -->
-      <!-- <script src="01-variaveis.js"></script> -->
-       <!-- <script src="02-tipos-de-dados.js"></script> -->
-        <!-- <script src="03-operadores-de-comparacao.js"></script> -->
-         <!-- <script src="04-operadores-aritmeticos.js"></script> -->
-          <script src="05-condicional-if.js"></script>
+    <!-- Aplicando JavaScript Externo -->
+    <!-- <script src="ola-mundo.js"></script> -->
+    <!-- <script src="01-variaveis.js"></script> -->
+    <!-- <script src="02-tipos-de-dados.js"></script> -->
+    <!-- <script src="03-operadores-de-comparacao.js"></script> -->
+    <!-- <script src="04-operadores-aritmeticos.js"></script> -->
+    <!-- <script src="05-condicional-if.js"></script> -->
+    <!-- <script src="06-condicional-switch.js"></script> -->
+    <!-- <script src="07-laco-for.js"></script> -->
+    <!-- <script src="08-laco-while.js"></script> -->
+    <!-- <script src="09-laco-do-while.js"></script> -->
+    <script src="10-funcoes.js"></script>
 </body>
 
 </html>
