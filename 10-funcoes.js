@@ -63,3 +63,27 @@ function apresentarPessoa(nome, idade) {
 
 // Invocando a função e passando os argumentos
 apresentarPessoa("Thomas Pires", 22);
+
+
+// Trabalhando com funções anônimas
+const dadosLoteria = function () {
+    console.log("Carregando dados da loteria...");
+}
+
+// Ativando função anônima
+dadosLoteria();
+
+
+// Trabalhando com Arrow Functions
+const saudacao = () => {
+    console.log("Ebaaa Arrow Functionss");
+}
+
+saudacao();
+
+// Funções com retorno
+function multiplicar(a, b) {
+    return a * b;
+}
+
+console.log(multiplicar(4, 5));
