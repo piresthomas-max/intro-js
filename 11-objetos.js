@@ -79,3 +79,89 @@ const pessoa = {
 }
 
 pessoa.apresentar()
+
+console.log("--- objetos aninhados ---");
+
+const aluno = {
+    nome: "Vanessa",
+    sobrenome: "da Silva",
+    idade: 18,
+
+    endereco: {
+        cidade: "São Paulo",
+        estado: "SP",
+        bairro: "Carrão",
+        cep: "04315-030",
+        coordenadas: {
+            latitude: "-2393736278",
+            longitude: "-466516782"
+        }
+    }
+}
+
+console.log(aluno.endereco.cidade);
+
+console.log(aluno.endereco.coordenadas.latitude);
+
+// Exemplos reais (nem tanto)
+// Simulando resposta da API
+
+const clima = {
+    cidade: "São Paulo",
+    temperatura: 19,
+    umidade: 80,
+    vento: 20
+}
+
+console.log(`
+    cidade: ${clima.cidade}
+    Temperatura atual: ${clima.temperatura}C
+    umidade: ${clima.umidade} | vento: ${clima.vento}km/h
+`);
+
+// métodos úteis para manipular objetos
+
+console.log("----------- métodos para objetos -----------------------");
+
+const produto = {
+    nome: "Notebook",
+    preco: 2500,
+    estoque: 15,
+    marca: "Dell",
+    disponivel: true
+};
+
+// 1 - objects.keys ()
+// Object.keys() - Retorna uma lista(array) com as chaves(propriedades) de um objeto
+console.log(Object.keys(produto));
+
+// 2 - object.value()
+// retorna uma lista (array) com os valores de um objeto
+
+console.log(Object.values(produto));
+
+// 3 - Object.entries()
+// retorna uma lista(array) contendo os pares de chave e valor dentro de uma outra lista para cada par.
+
+console.log(Object.entries(produto));
+
+// Iterando sobre um objeto
+console.log("--- Iterando sobre um objeto com for/in---");
+
+/* 
+estrtura de um for...in
+
+for(let propriedade in produto) {
+    bloco de código que será executado
+}
+*/
+
+for (const propriedade in produto) {
+    console.log(propriedade);
+}
+
+// for/in com acesso a valores
+for (const propriedade in produto) {
+    console.log(produto[propriedade]);
+
+}
