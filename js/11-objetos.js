@@ -163,5 +163,4 @@ for (const propriedade in produto) {
 // for/in com acesso a valores
 for (const propriedade in produto) {
     console.log(produto[propriedade]);
-
 }
