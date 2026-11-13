@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Explicação sobre o DOM </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f5f0e6;
+            color: #3f443b;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        header {
+            background-color: #f4d6b0;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        main {
+            width: 100%;
+            max-width: 56.25rem;
+            margin: 3rem auto;
+            padding: 1rem;
+        }
+
+        section {
+            background-color: #fffefa;
+            padding: 2rem;
+            border-radius: 1.25rem;
+            border: 0.0625rem solid #e9e4d9;
+            box-shadow: 0 .5rem 1.5rem #3f443b27;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        figure img {
+            max-width: 100%;
+            padding: 1rem;
+        }
+
+        figure figcaption {
+            text-align: center;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            color: #77796e;
+        }
+
+        ul {
+            display: grid;
+            gap: 0.75rem;
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        li {
+            background-color: #f9f7f1;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 0.0625rem solid #e9e4d9;
+            transition: all 300ms ease-in-out;
+        }
+
+        li:hover {
+            transform: translateY(-0.25rem);
+            border-color: #f4d7b09d;
+        }
+
+        footer {
+            background-color: #f4d6b0;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo-principal"> Conhecendo o DOM </h1>
+    </header>
+
+    <main>
+        <section>
+            <h2> O que é o DOM? </h2>
+            <p> DOM significa <strong> Document Object Model </strong>. </p>
+            <p> É uma representação do documento HTML em forma de objetos, organizada em uma estrutura hierárquica de
+                árvore, conhecida como DOM Tree. </p>
+            <p> Funciona como uma espécie de árvore genealógica. </p>
+
+            <figure>
+                <img src="https://www.w3schools.com/js/img_htmltree_800.svg"
+                    alt="Representação do Document Object Model em forma de árvore">
+                <figcaption> Exemplo de DOM Tree (árvore DOM) - Foto: W3Schools </figcaption>
+            </figure>
+
+            <p> Note que cada elemento do HTML está conectado. Chamamos esses elementos de nó(node) dentro dessa
+                estrutura. </p>
+
+            <p> Em outras palavras, o navegador transforma o HTML em uma estrutura que o JavaScript consegue acessar.
+            </p>
+        </section>
+
+        <section>
+            <h2> Pra que serve o DOM? </h2>
+            <p> O DOM permite que o JavaScript interaja com os elementos HTML. <Strong>Exemplos:</Strong> </p>
+
+            <ul>
+                <li><strong> Selecionar elementos </strong>: Encontrar um botão </li>
+
+                <li><strong> Alterar conteúdo </strong>: Alterar um título, paragráfo... </li>
+
+                <li><strong> Alterar estilos </strong>: Mudar cores, aplicar bordas e qualquer outro estilo do css </li>
+
+                <li><strong> Criar elementos </strong>: Criar listas, links, paragrafos... </li>
+
+                <li><strong> Remover elementos </strong>: Excluir itens criados e já existentes </li>
+
+                <li><strong> Capturar eventos </strong>: Detectar cliques, teclas pressionadas </li>
+
+                <li><strong> Modificar atributos </strong>: Alterar um src, atributos aria e outros de modo geral...
+                </li>
+
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p> &copy; Todos os direitos reservados - Thomas | 2026 </p>
+    </footer>
+
+    <!-- Área de testes 🥳 -->
+    <script>
+        // Capturando/selecionando elementos
+        const tituloPrincipal = document.getElementById("titulo-principal");
+
+        // Alterando o conteúdo do título principal
+        tituloPrincipal.textContent = " Turma SP18 - Aprendendo DOM";
+
+        // Capturando elementos com outro método
+
+        // Busca o primeiro elemento que corresponde ao seletor
+        const section = document.querySelector("section")
+
+        section.style.backgroundColor = "#f4d6b0";
+
+        // Busca todos os elementos que correspondem ao seletor
+        const sections = document.querySelectorAll("section");
+        console.log(sections);
+
+        // Usamos o forEach para percorrer o elementos de um array, executando uma função para cada elemento.
+        sections.forEach(function (section) {
+            section.style.backgroundColor = "#f4d6b0";
+            section.style.border = "8px solid none";
+        })
+    </script>
+</body>
+
+</html>
